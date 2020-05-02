@@ -5,10 +5,28 @@
     mandatory
     @change="$emit('input', $event)"
   >
-    <v-btn v-ripple="false" value="transition" class="DataSelector-Button">
+    <v-btn
+      v-ripple="false"
+      value="weekly-transition"
+      class="DataSelector-Button"
+      :x-small="true"
+    >
+      週別
+    </v-btn>
+    <v-btn
+      v-ripple="false"
+      value="daily-transition"
+      class="DataSelector-Button"
+      :x-small="true"
+    >
       日別
     </v-btn>
-    <v-btn v-ripple="false" value="cumulative" class="DataSelector-Button">
+    <v-btn
+      v-ripple="false"
+      value="cumulative"
+      class="DataSelector-Button"
+      :x-small="true"
+    >
       累計
     </v-btn>
   </v-btn-toggle>
@@ -22,6 +40,7 @@
   &-Button {
     border: none !important;
     margin: 2px;
+    padding: 0 6px !important;
     border-radius: 4px !important;
     height: 24px !important;
     font-size: 12px !important;

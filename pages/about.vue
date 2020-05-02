@@ -4,10 +4,33 @@
       当サイトについて
     </h2>
     <TextCard>
-      当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、愛知県が開設したものです。<br />
+      当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、愛知県内外の有志が開設したものです。<br />
+      <br />
+      複製・改変が許されたオープンソースライセンスで公開されている、<a target="_blank" href="https://stopcovid19.metro.tokyo.lg.jp/">東京都公式新型コロナウイルス対策サイト</a>の<a target="_blank" href="https://github.com/tokyo-metropolitan-gov/covid19" rel="noopener">仕組み</a>を利用しています。<br />
       <br />
       愛知県による公式情報と客観的な数値をわかりやすく伝えることで、愛知県にお住まいの方や、愛知県内に拠点を持つ企業の方、愛知県を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
     </TextCard>
+    <Text-card title="協力団体">
+      <ul class="About-Cooperating-Organizations">
+        <li>
+          <a href="https://www.sakura.ad.jp/" target="_blank" rel="noopener">
+            さくらインターネット株式会社
+          </a>
+        </li>
+        <li>
+          <a href="https://www.netlify.com/" target="_blank" rel="noopener">
+            Netlify
+          </a>
+        </li>
+        <li>
+          <a href="https://www.code4.nagoya/" target="_blank" rel="noopener">
+            Code for Nagoya
+          </a>
+        </li>
+      </ul>
+      <br />
+      サーバー提供等で各種団体に協力をいただいて運営しています。協力を検討いただける自治体・企業の担当者はページ末尾のお問い合わせ先にご連絡ください。
+    </Text-card>
     <TextCard title="ブラウザ環境について">
       当サイトは以下の環境でご覧いただくことを推奨いたします。<br />
       <ul class="About-Browser-List">
@@ -78,19 +101,11 @@
       </ul>
     </TextCard>
     <TextCard title="免責事項">
-      当サイトに掲載されている情報の正確性については万全を期していますが、愛知県は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。<br />
+      当サイトに掲載されている情報の正確性については万全を期していますが、利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。<br />
       <br />
       また、利用者が当サイトを利用したことにより発生した利用者の損害及び利用者が第三者に与えた損害に対して、責任を負うものではありません。<br />
       <br />
       当サイトに掲載されている情報は、予告なしに変更又は削除することがあります。
-    </TextCard>
-    <TextCard title="データについて">
-      本サイトで公表しているデータは、<a
-        href="https://portal.data.metro.tokyo.lg.jp/"
-        target="_blank"
-        rel="noopener"
-        >東京都オープンデータカタログサイト</a
-      >より誰でも自由にダウンロードが可能です。（データは順次追加予定です）
     </TextCard>
     <TextCard title="ソースコードについて">
       本サイトのソースコードはMITライセンスで公開されており、誰でも自由に利用することができます。詳しくは、<a
@@ -100,11 +115,9 @@
         >GitHub リポジトリ</a
       >をご確認ください。
     </TextCard>
-
-    <TextCard title="お問い合わせ先（県のHPサイトポリシーについて）">
-      愛知県情報政策課インターネット運用グループ<br />
-      電話
-      <a href="tel:052-954-6114">052-954-6114</a>
+    <TextCard title="お問い合わせ先">
+      Code for Nagoya<br />
+      <a href="mailto:info@code4.nagoya">info@code4.nagoya</a>
     </TextCard>
   </div>
 </template>

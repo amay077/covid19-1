@@ -5,6 +5,9 @@
         <h3 :id="titleId" class="DataView-ToolbarTitle">
           {{ title }}
         </h3>
+        <div v-if="titleDate" class="DataView-ToolbarTitleDate">
+          {{ formattedTitleDate }} 現在
+        </div>
         <slot name="button" />
       </div>
       <v-spacer />
@@ -26,7 +29,7 @@
         target="_blank"
         rel="noopener"
       >
-        オープンデータへのリンク
+        出典: 愛知県新型コロナウイルス感染症対策サイト{{ subtext }}
         <v-icon class="ExternalLinkIcon" size="15">
           mdi-open-in-new
         </v-icon>
@@ -37,7 +40,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
+import {
+  convertDatetimeToISO8601Format,
+  convertDatetimeToShortFormat
+} from '@/utils/formatDate'
 
 @Component
 export default class DataView extends Vue {
@@ -46,8 +52,12 @@ export default class DataView extends Vue {
   @Prop() private date!: string
   @Prop() private url!: string
   @Prop() private info!: any // FIXME expect info as {lText:string, sText:string unit:string}
+  @Prop() private titleDate!: string
+  @Prop() private remarks!: object
+  @Prop() private subtext!: string
 
   formattedDate: string = convertDatetimeToISO8601Format(this.date)
+  formattedTitleDate: string = convertDatetimeToShortFormat(this.titleDate)
 }
 </script>
 
@@ -89,6 +99,7 @@ export default class DataView extends Vue {
     height: auto !important;
   }
   &-TitleContainer {
+    width: 100%;
     padding: 14px 0 8px;
     color: $gray-2;
   }
@@ -100,12 +111,21 @@ export default class DataView extends Vue {
     font-weight: normal;
     line-height: 1.5;
   }
+  &-ToolbarTitleDate {
+    width: 100%;
+    text-align: right;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray-3;
+  }
   &-CardText {
-    margin-bottom: 46px;
+    margin-bottom: 78px;
     margin-top: 35px;
   }
   &-CardTextForXS {
-    margin-bottom: 46px;
+    margin-bottom: 78px;
     margin-top: 70px;
   }
   &-Footer {
@@ -115,6 +135,7 @@ export default class DataView extends Vue {
     color: $gray-3 !important;
     justify-content: space-between;
     flex-direction: row-reverse;
+    width: 97%;
     .OpenDataLink {
       text-decoration: none;
       .ExternalLinkIcon {
@@ -125,5 +146,9 @@ export default class DataView extends Vue {
 }
 .v-toolbar__content {
   height: auto !important;
+}
+.v-footer {
+  position: absolute;
+  bottom: 0;
 }
 </style>

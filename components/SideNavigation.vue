@@ -13,7 +13,7 @@
           <img src="/logo.svg" :alt="$t('Tokyo')" />
         </div>
         <h1 class="SideNavigation-Heading">
-          {{ $t('COVID-19') }}<br />{{ $t('Measures site') }}
+          {{ $t('COVID-19') }}<br />{{ $t('Measures site (Unofficial)') }}
         </h1>
       </nuxt-link>
     </div>
@@ -40,25 +40,31 @@
       <div class="SideNavigation-Footer">
         <div class="SideNavigation-SocialLinkContainer">
           <a
-            href="https://line.me/R/ti/p/%40822sysfc"
-            target="_blank"
-            rel="noopener"
-          >
-            <img src="/line.png" alt="LINE" />
-          </a>
-          <a
-            href="https://twitter.com/tokyo_bousai"
+            href="https://twitter.com/stopcovid19ai"
             target="_blank"
             rel="noopener"
           >
             <img src="/twitter.png" alt="Twitter" />
           </a>
           <a
-            href="https://www.facebook.com/tochokoho"
+            href="https://github.com/code4nagoya/covid19"
             target="_blank"
             rel="noopener"
           >
-            <img src="/facebook.png" alt="Facebook" />
+            <img src="/github.png" alt="GitHub" />
+          </a>
+        </div>
+        <div class="SideNavigation-SponsorLinkContainer">
+          {{ $t('Powered by:') }}<br />
+          <a href="https://www.sakura.ad.jp/" target="_blank" rel="noopener">
+            <span class="image-title">{{ $t('SAKURA internet Inc.') }}</span>
+            <img
+              class="sakura-internet-logo"
+              src="/sakura-internet.svg"
+              width="172px"
+              height="46.5px"
+              :alt="$t('SAKURA internet Inc.')"
+            />
           </a>
         </div>
         <!-- <small class="SideNavigation-Copyright" lang="en">
@@ -77,7 +83,7 @@
     "Navi Close": "サイドメニュー項目を閉じる",
     "Aichi": "愛知県",
     "COVID-19": "新型コロナウイルス感染症",
-    "Measures site": "対策サイト",
+    "Measures site (Unofficial)": "対策サイト(非公式)",
     "Aichi Prefecture Government": "愛知県",
     "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
     "The latest updates": "県内の最新感染動向",
@@ -88,8 +94,14 @@
     "Official statements from Task Force": "愛知県新型コロナウイルス感染症対策本部会議報",
     "Cancelled public events": "愛知労働局主催等 中止又は延期するイベント等",
     "Government official website": "愛知県公式ホームページ",
+    "Government official LINE": "愛知県-新型コロナ対策パーソナルサポート(LINE)",
+    "Government official Twitter": "愛知県庁公式Twitter",
     "Message from Governor Omura": "知事からのメッセージ",
-    "About us": "当サイトについて"
+    "About us": "当サイトについて",
+    "Other local Government": "他自治体の対策サイト",
+    "Powered by:": "Powered by:",
+    "SAKURA internet Inc.": "さくらインターネット",
+    "Nagoya COVID-19 Special Site": "名古屋市新型コロナウイルス感染症対策特設サイト"
   }
 }
 </i18n>
@@ -113,7 +125,8 @@ export default {
         {
           icon: 'mdi-chart-timeline-variant',
           title: this.$t('The latest updates'),
-          link: '/'
+          link: '/',
+          divider: true
         },
         {
           icon: 'covid',
@@ -130,7 +143,7 @@ export default {
           icon: 'mdi-account-multiple',
           title: this.$t('for Citizens'),
           link:
-            'https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html'
+            'https://www.pref.aichi.jp/site/covid19-aichi/kansensya-kensa.html'
         },
         {
           icon: 'mdi-domain',
@@ -141,7 +154,7 @@ export default {
         {
           title: this.$t('Official statements from Task Force'),
           link:
-            'https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus-taisakuhonbu.html'
+            'https://www.pref.aichi.jp/site/covid19-aichi/novel-coronavirus-taisakuhonbu.html'
         },
         {
           title: this.$t('Cancelled public events'),
@@ -150,7 +163,7 @@ export default {
         },
         {
           title: this.$t('Message from Governor Omura'),
-          link: 'https://www.pref.aichi.jp/chiji/index.html'
+          link: 'https://www.pref.aichi.jp/chiji/message/index00.html'
         },
         {
           title: this.$t('About us'),
@@ -158,8 +171,26 @@ export default {
         },
         {
           title: this.$t('Government official website'),
-          link: 'https://www.pref.aichi.jp/',
+          link: 'https://www.pref.aichi.jp/'
+        },
+        {
+          title: this.$t('Government official LINE'),
+          link: 'https://liny.link/r/1653954481-KA3xJl9g?lp=8Zhyvz'
+        },
+        {
+          title: this.$t('Government official Twitter'),
+          link: 'https://twitter.com/pref_aichi',
           divider: true
+        },
+        {
+          title: this.$t('Nagoya COVID-19 Special Site'),
+          link:
+            'https://nagoyabousai.maps.arcgis.com/apps/Cascade/index.html?appid=04c0250edfe54ae4af7f1c8755d275b5',
+          divider: true
+        },
+        {
+          title: this.$t('Other local Government'),
+          link: 'https://stopcovid19.code4japan.org/'
         }
       ]
     },
@@ -246,6 +277,40 @@ export default {
       }
     }
   }
+  &-SponsorLinkContainer {
+    overflow: visible;
+    padding-top: 0.8rem;
+    white-space: normal;
+    font-size: 0.82rem;
+    color: $gray-1;
+    & a {
+      color: #333;
+      text-decoration: none;
+    }
+    & a:hover {
+      opacity: 0.6;
+    }
+    & img {
+      padding-bottom: 0.9rem;
+    }
+    & img.sakura-internet-logo {
+      margin: -6px 0 0 -14px;
+      width: 176px;
+    }
+    & .image-title {
+      display: inline-block;
+      width: 0;
+      height: 1.5rem;
+      overflow: hidden;
+    }
+    & .no-image-title {
+      display: inline-block;
+      line-height: 1.8rem;
+      color: #444;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
   &-Copyright {
     display: block;
     margin-top: 10px;
@@ -258,6 +323,7 @@ export default {
 .open {
   @include lessThan($small) {
     position: fixed;
+    overflow: auto;
     top: 0;
     bottom: 0;
     left: 0;

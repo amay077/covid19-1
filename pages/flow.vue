@@ -31,8 +31,8 @@
           <div>
             <a v-scroll-to="'#consult'" href="#consult">
               <img
-                src="/flow/sp/sp_flow_01_02_03_nav@2x.png"
-                alt="新型コロナ受診相談窓口へ"
+                src="/flow/sp/sp_flow_01_02_03_nav_2@2x.png"
+                alt="帰国者・接触者相談センターへ"
               />
             </a>
           </div>
@@ -47,8 +47,8 @@
           <div>
             <a v-scroll-to="'#consult'" href="#consult">
               <img
-                src="/flow/sp/sp_flow_01_02_03_nav@2x.png"
-                alt="新型コロナ受診相談窓口へ"
+                src="/flow/sp/sp_flow_01_02_03_nav_2@2x.png"
+                alt="帰国者・接触者相談センターへ"
               />
             </a>
           </div>
@@ -63,8 +63,8 @@
           <div>
             <a v-scroll-to="'#consult'" href="#consult">
               <img
-                src="/flow/sp/sp_flow_01_02_03_nav@2x.png"
-                alt="新型コロナ受診相談窓口へ"
+                src="/flow/sp/sp_flow_01_02_03_nav_2@2x.png"
+                alt="帰国者・接触者相談センターへ"
               />
             </a>
           </div>
@@ -73,13 +73,75 @@
           <div class="mx-2 mb-5">
             <img
               src="/flow/sp/sp_flow_04@2x.png"
-              alt="不安に思う方／微熱・軽い咳・感染の不安／新型コロナコールセンター 午前９時から午後９時（土日祝含む）"
+              alt="不安に思う方／微熱・軽い咳・感染の不安"
             />
           </div>
-          <div class="TelLink">
-            <a href="tel:0570550571"
-              ><img src="/flow/sp/sp_flow_tel_01@2x.png" alt="0570-550571"
-            /></a>
+          <div>
+            <h4 class="SodanHeader">
+              愛知県精神保健福祉センター
+            </h4>
+
+            <p
+              style="display: flex; justify-content: center; align-items: center;"
+            >
+              <a
+                style="font-size: 8.3333333333vw; font-weight: bold; text-align: center; text-decoration: none;"
+                href="https://www.pref.aichi.jp/site/covid19-aichi/soudan-korona.html"
+              >
+                052-962-5377
+                <v-icon size="16">
+                  mdi-open-in-new
+                </v-icon>
+              </a>
+            </p>
+
+            <h4 class="SodanHeader">
+              愛知県－LINE公式アカウント
+            </h4>
+
+            <div
+              class="SodanHeader"
+              style="margin-top: 10px; margin-bottom: 10px; "
+            >
+              <div>
+                <a
+                  class="Link"
+                  href="https://www.pref.aichi.jp/site/covid19-aichi/line-1.html"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  新型コロナ対策パーソナルサポート
+                  <v-icon size="16">
+                    mdi-open-in-new
+                  </v-icon>
+                </a>
+              </div>
+            </div>
+
+            <h4 class="SodanHeader">
+              新型コロナ一般相談窓口
+            </h4>
+
+            <div
+              class="SodanHeader"
+              style="margin-top: 10px; margin-bottom: 10px; "
+            >
+              <div style="font-size: 0.875rem; margin-bottom: 10px;">
+                愛知県保健医療局<br />健康医務部健康対策課<br />感染症グループ
+              </div>
+              <div>
+                <p
+                  style="display: flex; justify-content: center; align-items: center;"
+                >
+                  <a
+                    style="font-size: 8.3333333333vw; font-weight: bold; text-align: center; text-decoration: none;"
+                    href="tel:0529546272"
+                  >
+                    052-954-6272
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
           <div class="mt-4">
             <a v-scroll-to="'#consult'" href="#consult">
@@ -92,47 +154,28 @@
         </div>
         <div id="consult" class="Flow-Card-Parts Flat">
           <h3 class="SodanHeader Title">
-            新型コロナ受診相談窓口
+            帰国者・接触者<br />相談センター
           </h3>
-          <p class="SodanHeader">
-            帰国者・接触者電話相談センター
-          </p>
           <div class="SodanHeader">
             <div class="SodanChip">
               24時間対応
             </div>
           </div>
           <dl>
-            <div class="SodanHeijitsu">
-              <dt class="Heijitsu">
-                平日（日中）
-              </dt>
+            <div class="">
               <dd>
                 <a
                   class="Link"
-                  href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+                  href="https://www.pref.aichi.jp/site/covid19-aichi/soudan.html#soudan"
                   target="_blank"
                   rel="noopener"
                 >
-                  各保健所の電話番号は福祉保健局HPへ
-                  <v-icon size="16">
-                    mdi-open-in-new
-                  </v-icon>
-                </a>
-              </dd>
-            </div>
-            <div class="SodanYakan">
-              <dt class="Yakan">
-                平日土日祝
-                <br />
-                <span class="SodanTime">午前９時から午後５時</span>
-              </dt>
-              <dd class="TelLink">
-                <a href="tel:0529546272">
-                  <img
-                    src="/flow/sp/sp_flow_tel_03@2x.png"
-                    alt="052-954-6272"
-                  />
+                  <p class="SodanHeader">
+                    お住まいの地域の保健所・保健センターへお電話ください
+                    <v-icon size="16">
+                      mdi-open-in-new
+                    </v-icon>
+                  </p>
                 </a>
               </dd>
             </div>
@@ -141,8 +184,8 @@
         <div class="Flow-Card-Parts">
           <div class="mx-2 mb-5">
             <img
-              src="/flow/sp/sp_flow_06_01@2x.png"
-              alt="新型コロナ受診相談窓口による相談結果／新型コロナ外来受診が必要と判断された場合／新型コロナ外来（帰国者・接触者外来）医師による判断"
+              src="/flow/sp/sp_flow_06_01_2@2x.png"
+              alt="帰国者・接触者相談センターによる相談結果／新型コロナ外来受診が必要と判断された場合／新型コロナ外来（帰国者・接触者外来）医師による判断"
             />
           </div>
           <div class="Col2Btn">
@@ -198,7 +241,7 @@
         </div>
       </div>
       <a
-        href="https://www.pref.aichi.jp//soshiki/kenkotaisaku/novel-coronavirus.html"
+        href="https://www.pref.aichi.jp/site/covid19-aichi/"
         target="_blank"
         rel="noopener"
         class="Flow-Card-Button"
